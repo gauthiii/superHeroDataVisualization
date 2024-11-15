@@ -1,0 +1,516 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    /* background-image: linear-gradient(to bottom right, #ead09b, #474740); */
+    /* background-color: #000000; */
+    background-image: url('bg5.webp');
+    background-color: rgba(255, 246, 246, 0.884);
+    background-blend-mode: lighten;
+    /* background-image: url('tony.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+     */
+    
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20; 
+    padding: 20px;
+    translate: 0px -80px;
+}
+
+.submission{
+    font-family: "Poppins";
+    padding-left: 30px;
+    translate: 0px -120px;
+    font-size: 10px;
+    font-weight: bold;
+    z-index: 1000;
+    
+}
+
+.navbar{
+
+    /* background-color: #000000; */
+    /* box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.122); */
+    padding-bottom: 20px;
+    margin-top: -10px;
+    /* position: fixed;
+    width: 100%; */
+    z-index: 100;
+    animation: fadeIn2 1s ease-in-out;
+    
+}
+
+@keyframes fadeIn2
+{	
+    0%{opacity: 0;translate: 0px -100px;}
+    100%{opacity: 1;}
+
+}
+
+header {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 20px;
+   
+}
+
+header h1 {
+    font-size: 4em;
+    font-family: "Source Code Pro", monospace;
+    font-family: "Bangers";
+    /* color: #e67cac; */
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    animation: fade 5s ease-in-out infinite;
+  
+}
+
+@keyframes fade
+{	
+	0%{color: #ecc21a;}
+    10%{color: #ec1a1a;}
+    20%{color: #1a6eec;}
+    30%{color: #ec1a1a;}
+    40%{color: #15a12c;}
+    50%{color: #ec1a1a;}
+    60%{color: #db49a3;}
+    70%{color: #ec1a1a;}
+    80%{color: #1aec8a;}
+	90%{color: #ec1a1a;}
+    100%{color: #fafafa;}
+}
+
+#controlPanel {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 320px;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffffb3;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 870px;
+    /* animation: fadeIn 1s ease-in-out; */
+}
+
+@keyframes fadeIn
+{	
+    0%{opacity: 0;translate: 1000px -50px;}
+    100%{opacity: 1;}
+
+}
+
+#controlPanel label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#controlPanel input,
+#controlPanel select,
+#applyButton {
+    padding: 5px;
+    font-size: 14px;
+}
+
+#applyButton {
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 80px;
+}
+
+#applyButton:hover{
+
+    background-color: #1a6eec;
+
+}
+
+
+.timeline-container {
+    
+    /* display: grid;
+    grid-template-rows: repeat(5, 100px); */
+    /* gap: 20px; */
+
+    /* border: 2px solid black; */
+    /* background-color: #eccf5c; */
+
+    /* transform: scale(0.8); */
+/* 
+   transform: rotate(20deg);
+    transform-origin: top left;
+    translate: 150px -50px;  */
+
+    /* transform: rotateX(-30deg); */
+
+    
+
+    margin-right: 40px;
+
+    float: left;
+}
+
+
+.axis text, .row-label {
+    font-size: 12px;
+    fill: #333;
+}
+
+.dot {
+    stroke: #333;
+    stroke-width: 0.5px;
+    opacity: 0.8;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 12px;
+    box-shadow: 0px 0px 10px rgba(252, 210, 159, 0.1);
+}
+
+.tooltip h3 {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Colors for each row */
+/* .Intelligence { fill: #1f77b4; }
+.Strength { fill: #ff7f0e; }
+.Speed { fill: #2ca02c; }
+.Durability { fill: #d62728; }
+.Power { fill: #9467bd; } */
+
+#wordCloudContainer{
+
+    display: flex; 
+    justify-content: space-around; 
+    margin-top: 0px;
+    translate: 0px;
+    transition: 0.5s ease-in-out;
+}
+
+.wordcloud-title {
+    white-space: nowrap;
+    font-size: 18px; 
+    text-align: center; 
+}
+
+
+
+/* Overlay Styling */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+    z-index: 999; /* Position it below the popup but above all other content */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    backdrop-filter: blur(4px); /* Blurring effect */
+
+}
+
+#superheroCard{
+    scale: 0.8;
+    translate: 0 -70px;
+}
+
+
+
+/* Popup Styling */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    border-radius: 8px;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.popup-content {
+    padding: 20px;
+    /* text-align: center; */
+}
+
+.hidden {
+    display: none;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    transition: opacity 0.5s ease-in-out;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0px;
+    right: 6px;
+    font-size: 24px;
+    cursor: pointer;
+
+}
+
+.hero-name-animation, .hero-detail-animation, .attribute-bar-animation {
+    opacity: 0;
+    animation: fadeSlideIn 0.5s ease forwards;
+    animation-delay: 0.3s;
+}
+
+/* Hero Details */
+.hero-details {
+    margin: 10px 0;
+}
+
+.hero-detail-item {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.75em;
+   
+}
+
+/* Alignment Colors */
+.hero-detail-item:nth-child(3) {
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+/* Attributes Section */
+.attribute-bar {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    font-size: 0.9em;
+    gap: 5px; /* Space between items */
+    animation: fadeSlideIn2 1s ease forwards;
+}
+
+.attribute-label {
+    flex: 0 0 70px; /* Fixed width for the label */
+    text-align: left;
+}
+
+.attribute-value {
+    width: 30px;
+    text-align: right;
+    margin-right: 5px; /* Space between value and progress bar */
+}
+
+.progress-outer {
+    flex: 1;
+    height: 10px;
+    background-color: white; /* Background color for the remaining portion */
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid black;
+}
+
+.progress-inner {
+    height: 100%;
+    background-color: #000; /* Placeholder color, overwritten in JS */
+    transition: width 0.5s ease;
+    border-radius: 5px 0 0 5px; /* Rounded corner only on left side */
+}
+
+
+/* Gender */
+.hero-gender {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Animations */
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideIn2 {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero-image-animation {
+    animation: scaleIn 0.5s ease-out forwards;
+}
+
+.hero-name-animation {
+    animation: fadeSlideIn 0.5s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.hero-detail-animation {
+    animation: fadeSlideIn 0.5s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+.attribute-bar-animation {
+    animation: fadeSlideIn 0.5s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Popup and Overlay */
+.popup {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay {
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+
+.description-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.description-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: #444;
+}
+
+.description-section h3 {
+    font-size: 1.3em;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: bold;
+}
+
+.description-section p {
+    margin-bottom: 10px;
+}
+
+.description-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.description-section ul li {
+    margin-bottom: 8px;
+}
+
+.description-section a {
+    color: #1f77b4;
+    text-decoration: none;
+}
+
+.description-section a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+@media(max-width: 1250px){
+
+    .container {
+        max-width: 1200px;
+        margin: 20; 
+        padding: 20px;
+        translate: -50px -80px;
+    }
+
+    .timeline-container {
+        scale: 0.8;
+    }
+
+
+
+    #controlPanel{
+
+        
+
+        scale:0.8;
+        margin-left: 190px;
+
+    }
+
+    .submission{
+        font-size: 8px;
+    }
+    
+}
+
+
+@media(max-width: 1160px){
+
+  
+    
+}
